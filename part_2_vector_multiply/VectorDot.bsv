@@ -97,8 +97,8 @@ module mkVectorDot (VD);
         done_a <= False;
         done_b <= False;
         pos_out <= 0;
-        output_res <=0;
-        i <= zeroExtend(i_in);				//i should be 3 bits so "zeroExtended" was called		
+        output_res <=0;                                 // "output_res" shoule be forced to equal zero
+        i <= zeroExtend(i_in);				//"i" should be 3 bits so "zeroExtended" was called		
     endmethod
 
     method ActionValue#(Bit#(32)) response() if (done_all);
